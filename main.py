@@ -49,7 +49,7 @@ def main():
     message["To"] = to_mail
     message["Subject"] = "Weather Alert in Berlin"
     message.set_content(
-        f"Hello, Jackson! Here is the weather forecast for today.\n"
+        f"Hello, Jackson! \nHere is the weather forecast for today :3\n"
         f"There will be {weather_state} in approximately one hour.\n"
         f"There is a chance of {future_weather_state} later today.\n\n"
         "With love,\n"
