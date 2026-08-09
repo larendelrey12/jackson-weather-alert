@@ -32,10 +32,6 @@ def main():
     weather_state = weather_data["list"][0]["weather"][0]["description"]
     future_weather_state = weather_data["list"][4]["weather"][0]["description"]
 
-    if not should_send_alert(weather_state, future_weather_state):
-        print("No weather alert needed.")
-        return
-
     message = EmailMessage()
     message["From"] = mail
     message["To"] = to_mail
