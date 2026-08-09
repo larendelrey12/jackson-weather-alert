@@ -4,14 +4,6 @@ from email.message import EmailMessage
 
 import requests
 
-RAIN_KEYWORDS = ("rain", "drizzle", "thunderstorm", "snow", "shower")
-
-
-def should_send_alert(*weather_states):
-    combined_text = " ".join(weather_states).lower()
-    return any(keyword in combined_text for keyword in RAIN_KEYWORDS)
-
-
 def main():
     lat = os.environ.get("LAT")
     longitude = os.environ.get("LONG")
