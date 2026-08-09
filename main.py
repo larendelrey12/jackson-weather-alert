@@ -49,9 +49,6 @@ def main():
         smtp.login(mail, password)
         smtp.send_message(message)
 
-        message["To"] = mail
-        smtp.send_message(message)
-
 
 if __name__ == "__main__":
     main()
