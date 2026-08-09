@@ -52,13 +52,16 @@ def main():
         f"Hello, Jackson! \nHere is the weather forecast for today :3\n"
         f"There will be {weather_state} in approximately one hour.\n"
         f"There is a chance of {future_weather_state} later today.\n\n"
-        "With love,\n"
+        "With love,\n\n"
         "Your weather forecaster Lara"
     )
 
     with smtplib.SMTP("smtp.gmail.com", 587) as smtp:
         smtp.starttls()
         smtp.login(mail, password)
+        smtp.send_message(message)
+
+        message["To"] = mail
         smtp.send_message(message)
 
 
